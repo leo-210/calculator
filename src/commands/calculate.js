@@ -1,0 +1,48 @@
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const mexp = require("math-expression-evaluator");
+
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("calculate")
+    .setDescription("Calculate a math expression, as long as it makes sense")
+    .addStringOption(option =>
+      option
+        .setName("expression")
+        .setDescription("The math expression to calculate")
+        .setRequired(true)
+    ),
+  async execute(client, interaction) {
+    const exp = interaction.options.getString("expression");
+
+    const tokens = [
+      {
+        type: 8,
+        token: "root",
+        show: "root",
+        value: function (a, b) {
+          return Math.pow(b, 1 / a);
+        }
+      },
+      {
+        type: 0,
+        token: "sqrt",
+        show: "sqrt",
+        value: function (a) {
+          return Math.sqrt(a);
+        }
+      }
+    ];
+    try {
+      const value = mexp.eval(exp, tokens);
+      await interaction.reply({
+        content: `${exp} = ${value.toString()}`,
+        ephemeral: true
+      });
+    } catch (e) {
+      interaction.reply({
+        content: `Your expression is not valid : ${e.message}`,
+        ephemeral: true
+      });
+    }
+  }
+};
