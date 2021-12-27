@@ -1,0 +1,4 @@
+node_modules
+.env
+.idea
+.vs_code
