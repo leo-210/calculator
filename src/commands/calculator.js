@@ -13,7 +13,7 @@ module.exports = {
         {
           description: "```\n0\n=```",
           footer: {
-            text: `If the calculator doesn't respond, create a new one !  •  /calculator`
+            text: `If the calculator doesn't respond, create a new one !  •  Calculator`
           },
           color: "#5865F2"
         }
@@ -123,7 +123,7 @@ module.exports = {
                       expression.length !== 0 ? expression.join("") : "0"
                     }\n= ${result}\`\`\``,
                     footer: {
-                      text: `If the calculator doesn't respond, create a new one !  •  /calculator`
+                      text: `If the calculator doesn't respond, create a new one !  •  Calculator`
                     },
                     color: "#5865F2"
                   }
@@ -140,7 +140,7 @@ module.exports = {
                 expression.length !== 0 ? expression.join("") : "0"
               }\n=\`\`\``,
               footer: {
-                text: `If the calculator doesn't respond, create a new one !  •  /calculator`
+                text: `If the calculator doesn't respond, create a new one !  •  Calculator`
               },
               color: "#5865F2"
             }
