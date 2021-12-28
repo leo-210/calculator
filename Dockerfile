@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm i --only_prod
 
-FROM gcr.io/distroless/nodejs:16
+FROM arm64v8/node:16-slim
 
 WORKDIR /app
 
