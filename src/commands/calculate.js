@@ -32,17 +32,23 @@ module.exports = {
         }
       }
     ];
+    let value;
     try {
-      const value = mexp.eval(exp, tokens);
-      await interaction.reply({
-        content: `${exp} = ${value.toString()}`,
-        ephemeral: true
-      });
+      value = mexp.eval(exp, tokens);
     } catch (e) {
-      interaction.reply({
-        content: `Your expression is not valid : ${e.message}`,
-        ephemeral: true
-      });
+      value = `\b\bSyntax error : ${e.message}`;
     }
+    await interaction.reply({
+      embeds: [
+        {
+          description: `\`\`\`\n${exp}\n= ${value}\`\`\``,
+          footer: {
+            text: `Type /calculate to calculate your math expression !`
+          },
+          color: "#5865F2"
+        }
+      ],
+      ephemeral: true
+    });
   }
 };
