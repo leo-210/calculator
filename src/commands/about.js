@@ -8,7 +8,7 @@ module.exports = {
     await interaction.reply({
       embeds: [
         {
-          title: "Calculator by Léo-21#6810",
+          title: "Calculator, by Léo-21#6810",
           description:
             "Calculator is a Discord bot that allows you to have your own calculator" +
             " in Discord.",
@@ -19,8 +19,8 @@ module.exports = {
                 "`/calculator` to generate a new calculator." +
                 "If you want, you can also use the command `/calculate` to calculate" +
                 "a math expression. More info on the syntax with `/help syntax`.\n\n" +
-                "Note : the trigonometric functions are in degrees, and there's" +
-                " no way at the moment to change it to radians."
+                "Note : the calculator doesn't look very good on mobile, and unfortunately" +
+                " I cant' really do much about it."
             }
           ],
           color: "#5865F2"
