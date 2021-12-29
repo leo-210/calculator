@@ -3,7 +3,7 @@ FROM node:16-alpine as build
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm i --only_prod
+RUN npm ci
 
 FROM arm64v8/node:16-slim
 
