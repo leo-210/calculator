@@ -16,9 +16,9 @@ module.exports = {
             {
               name: "Usage",
               value:
-                "`/calculator` to generate a new calculator." +
+                "`/calculator` to generate a new calculator. " +
                 "If you want, you can also use the command `/calculate` to calculate" +
-                "a math expression. More info on the syntax with `/help syntax`.\n\n" +
+                " a math expression. More info on the syntax with `/help syntax`.\n\n" +
                 "Note : the calculator doesn't look very good on mobile, and unfortunately" +
                 " I cant' really do much about it."
             }
