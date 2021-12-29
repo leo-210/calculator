@@ -20,7 +20,7 @@ module.exports = {
                 "If you want, you can also use the command `/calculate` to calculate" +
                 " a math expression. More info on the syntax with `/help syntax`.\n\n" +
                 "Note : the calculator doesn't look very good on mobile, and unfortunately" +
-                " I cant' really do much about it."
+                " I can't really do much about it."
             }
           ],
           color: "#5865F2"
@@ -34,6 +34,12 @@ module.exports = {
               type: "BUTTON",
               label: "Invite the bot",
               url: "https://discord.com/api/oauth2/authorize?client_id=925164519045603338&permissions=2048&scope=bot%20applications.commands&redirect_uri=https://www.leo21.fr&response_type=code",
+              style: "LINK"
+            },
+            {
+              type: "BUTTON",
+              label: "Vote for the bot",
+              url: "https://top.gg/bot/925164519045603338/vote",
               style: "LINK"
             }
           ]
