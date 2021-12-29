@@ -33,7 +33,7 @@ module.exports = {
             {
               type: "BUTTON",
               label: "Invite the bot",
-              url: "https://Leo-210.github.io/Calculator/add.html",
+              url: "https://discord.com/api/oauth2/authorize?client_id=925164519045603338&permissions=2048&scope=bot%20applications.commands&redirect_uri=https://www.leo21.fr&response_type=code",
               style: "LINK"
             }
           ]
