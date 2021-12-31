@@ -16,26 +16,31 @@ module.exports = {
         )
     ),
   async execute(client, interaction) {
-    switch (interaction.options.getSubcommand()) {
-      case "basic":
-        await require("./calculators/basic_calculator").execute(
-          client,
-          interaction
-        );
-        return;
-      case "scientific":
-        await require("./calculators/scientific_calculator").execute(
-          client,
-          interaction
-        );
-        return;
+    try {
+      const subCommand = interaction.options.getSubcommand();
+
+      switch (subCommand) {
+        case "basic":
+          await require("./calculators/basic_calculator").execute(
+            client,
+            interaction
+          );
+          return;
+        case "scientific":
+          await require("./calculators/scientific_calculator").execute(
+            client,
+            interaction
+          );
+          return;
+      }
+    } catch (e) {
+      await interaction.reply({
+        content:
+          "If you see this message, that means that you ran the command just at " +
+          "the wrong moment, congrats !\n\nAnyways, the bot is just updating, " +
+          "and because of how Discord work it takes some time... Re-try the " +
+          "command in about an hour !"
+      });
     }
-    await interaction.reply({
-      content:
-        "If you see this message, that means that you ran the command just at " +
-        "the wrong moment, congrats !\n\nAnyways, the bot is just updating, " +
-        "and because of how Discord work it takes some time... Re-try the " +
-        "command in about an hour !"
-    });
   }
 };
