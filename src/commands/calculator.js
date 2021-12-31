@@ -22,12 +22,20 @@ module.exports = {
           client,
           interaction
         );
-        break;
+        return;
       case "scientific":
         await require("./calculators/scientific_calculator").execute(
           client,
           interaction
         );
+        return;
     }
+    await interaction.reply({
+      content:
+        "If you see this message, that means that you ran the command just at " +
+        "the wrong moment, congrats !\n\nAnyways, the bot is just updating, " +
+        "and because of how Discord work it takes some time... Re-try the " +
+        "command in about an hour !"
+    });
   }
 };
