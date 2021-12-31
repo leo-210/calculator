@@ -16,11 +16,11 @@ module.exports = {
             {
               name: "Usage",
               value:
-                "`/calculator` to generate a new calculator. " +
-                "If you want, you can also use the command `/calculate` to calculate" +
-                " a math expression. More info on the syntax with `/help syntax`.\n\n" +
-                "Note : the calculator doesn't look very good on mobile, and unfortunately" +
-                " I can't really do much about it."
+                "* `/calculator` to generate a new calculator. You can choose what type of calculator you want.\n" +
+                "* `/calculate` to calculate a math expression. More info on the" +
+                " syntax with `/help syntax`.\n\n" +
+                "*Note : the calculators don't look very good on mobile, and unfortunately" +
+                " I can't really do much about it.*"
             }
           ],
           color: "#5865F2"
@@ -38,7 +38,7 @@ module.exports = {
             },
             {
               type: "BUTTON",
-              label: "Vote for the bot",
+              label: "Vote on Top.gg",
               url: "https://top.gg/bot/925164519045603338/vote",
               style: "LINK"
             }
