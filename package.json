@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "version": "0.1.2",
+  "version": "1.0.0-rc",
   "description": "",
   "main": "./src/index.js",
   "nodemonConfig": {
